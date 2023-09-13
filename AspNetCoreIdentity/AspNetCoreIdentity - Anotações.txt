@@ -1,0 +1,15 @@
+# Não está visualizando a page? Login/Logout
+- Adiciona a rota em Startup.cs: endpoints.MapRazorPages();
+
+# Não está acessando o maneger do Login?
+- Adiciona o services: services.AddMvc(options => options.EnableEndpointRouting = false);
+
+# Para visualizar os usuários logados e acessar o que irá dentro do cookie
+- Acessar "Immediate Window", definir o local do break point e digitar os comandos:
+-- User
+-- User.Claims.ToList()
+
+# Provedores de log de terceiros
+- https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/logging/?view=aspnetcore-6.0#third-party-logging-providers
+- (https://elmah.io/) é bom, porém, pago.
+- (https://kisslog.net/) é gratuito.
